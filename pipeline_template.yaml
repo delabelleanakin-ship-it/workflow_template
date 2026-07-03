@@ -13,5 +13,5 @@ spec:
   templates:
     - name: pipeline-step
       container:
-        image: "docker.io/your-docker-username/your-image-name:latest"
-        command: ["python", "/app/main.py"]
+        image: "docker.io/delabelleanakin/app:latest"
+        command: ["python", "app.py"]
