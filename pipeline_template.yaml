@@ -3,11 +3,13 @@ kind: WorkflowTemplate
 metadata:
   name: my-custom-pipeline
   annotations:
-    scenarios.ai.sap.com/id: "custom-ml-scenario"
-    scenarios.ai.sap.com/name: "Custom ML Pipeline Scenario"
-    executables.ai.sap.com/id: "pipeline-executable"
-    executables.ai.sap.com/name: "Run Custom Python Pipeline"
+    scenarios.ai.sap.com/name: "custom-ml-scenario"
+    scenarios.ai.sap.com/description: "Custom ML Pipeline Scenario"
+    executables.ai.sap.com/name: "pipeline-executable"
+    executables.ai.sap.com/description: "Run Custom Python Pipeline"
   labels:
+    scenarios.ai.sap.com/id: "custom-ml-scenario"
+    ai.sap.com/version: "1.5"
     ai.sap.com/instanceType: "starter" 
 spec:
   templates:
