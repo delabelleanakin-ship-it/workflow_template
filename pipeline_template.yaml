@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: my-custom-pipeline
+  annotations:
+    scenarios.ai.sap.com/id: "custom-ml-scenario"
+    scenarios.ai.sap.com/name: "Custom ML Pipeline Scenario"
+    executables.ai.sap.com/id: "pipeline-executable"
+    executables.ai.sap.com/name: "Run Custom Python Pipeline"
+  labels:
+    ai.sap.com/instanceType: "starter" 
+spec:
+  templates:
+    - name: pipeline-step
+      container:
+        image: "docker.io/your-docker-username/your-image-name:latest"
+        command: ["python", "/app/main.py"]
